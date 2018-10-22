@@ -1,5 +1,11 @@
 package com.hk.dao;
 
-public class NewDao {
+import java.util.List;
+
+import com.hk.bean.New;
+
+public interface NewDao {
+	
+	List<New> selectNews();
 	
 }

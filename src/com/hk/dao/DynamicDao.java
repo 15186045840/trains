@@ -1,5 +1,11 @@
 package com.hk.dao;
 
-public class DynamicDao {
+import java.util.List;
+
+import com.hk.bean.Dynamic;
+
+public interface DynamicDao {
+	
+	List<Dynamic> selectDynamic();
 	
 }

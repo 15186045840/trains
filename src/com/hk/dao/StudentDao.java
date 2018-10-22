@@ -1,5 +1,9 @@
 package com.hk.dao;
 
-public class StudentDao {
-	
+import java.util.List;
+
+import com.hk.bean.Student;
+
+public interface StudentDao {
+	List<Student> selectAllStudents();
 }

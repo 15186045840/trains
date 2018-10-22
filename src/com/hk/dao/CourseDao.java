@@ -1,5 +1,11 @@
 package com.hk.dao;
 
-public class CourseDao {
+import java.util.List;
+
+import com.hk.bean.Course;
+
+public interface CourseDao {
+	
+	List<Course> selectCourse();
 	
 }
