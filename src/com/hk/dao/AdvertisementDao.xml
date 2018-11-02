@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.dao.AdvertisementDao">
+	<select id="selectAdvertisement" resultType="Advertisement">
+		select * from advertisement
+	</select>
+	
+	<insert id="insertAdvertisement">
+		insert into advertisement(AID,Atype,Atitle,Acontent,Alink)
+		value(#{AID},#{Atype},#{Atitle},#{Acontent},#{Alink})
+	</insert>
+	
+	<update id="updateAdvertisement">
+		update advertisement
+		set Atype=#{Atype},Atitle=#{Atitle},Acontent=#{Acontent},Alink=#{Alink}
+		where AID=#{AID}
+	</update>
+	
+	<delete id="deleteAdvertisement">
+		delete from advertisement where AID=#{AID}
+	</delete>
+	
+</mapper>
