@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.dao.NewsDao">
+	<resultMap type="news" id="NewsMapper">
+		<id column="NID" property="NID"/>
+		<result column="Ntype" property="Ntype"/>
+		<result column="Ntitle" property="Ntitle"/>
+		<result column="Ncontent" property="Ncontent"/>
+		<result column="Ndate" property="Ndate"/>
+		<result column="Rlink" property="Nlink"/>
+
+	</resultMap>
+
+	<select id="selectNews" resultMap="NewsMapper">
+		select n.NID,Ntype,Ntitle,Ncontent,Ndate,Rlink 
+		from news n,resource r ,news_resource nr 
+		where n.NID=nr.NID and r.RID=nr.RID
+	</select>
+	
+	<insert id="insertNews">
+		insert into news(NID,Ntype,Ntitle,Ncontent,Ndate)
+		value(#{NID},#{Ntype},#{Ntitle},#{Ncontent},#{Ndate})
+	</insert>
+	
+	<update id="updateNews">
+		update news
+		set Ntype=#{Ntype},Ntitle=#{Ntitle},Ncontent=#{Ncontent},Ndate=#{Ndate}
+		where NID=#{NID}
+	</update>
+	
+	<delete id="deleteNews">
+		delete from news where NID=#{NID}
+	</delete>
+</mapper>

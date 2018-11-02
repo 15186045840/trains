@@ -1,20 +1,15 @@
 package com.hk.bean;
 
 public class Root {
+	private int RTID;
 	private String RTname;
 	private String RTpassword;
-	private int RTvalue;
-	
-	
-	public Root() {
-		super();
-		// TODO Auto-generated constructor stub
+	private String RTdate;
+	public int getRTID() {
+		return RTID;
 	}
-	public Root(String rTname, String rTpassword, int rTvalue) {
-		super();
-		RTname = rTname;
-		RTpassword = rTpassword;
-		RTvalue = rTvalue;
+	public void setRTID(int rTID) {
+		RTID = rTID;
 	}
 	public String getRTname() {
 		return RTname;
@@ -28,16 +23,15 @@ public class Root {
 	public void setRTpassword(String rTpassword) {
 		RTpassword = rTpassword;
 	}
-	public int getRTvalue() {
-		return RTvalue;
+	public String getRTdate() {
+		return RTdate;
 	}
-	public void setRTvalue(int rTvalue) {
-		RTvalue = rTvalue;
+	public void setRTdate(String rTdate) {
+		RTdate = rTdate;
 	}
 	@Override
 	public String toString() {
-		return "Root [RTname=" + RTname + ", RTpassword=" + RTpassword + ", RTvalue=" + RTvalue + "]";
+		return "Root [RTID=" + RTID + ", RTname=" + RTname + ", RTpassword=" + RTpassword + ", RTdate=" + RTdate + "]";
 	}
-	
 
 }

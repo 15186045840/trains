@@ -3,5 +3,22 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hk.dao.RootDao">
+	<select id="selectRoot" resultType="Root">
+		select RTID,RTname,RTpassword,RTdate from root
+	</select>
 	
+	<insert id="insertRoot">
+		insert into root(RTID,RTname,RTpassword,RTdate)
+		value(#{RTID},#{RTname},#{RTpassword},#{RTdate})
+	</insert>
+	
+	<update id="updateRoot">
+		update root 
+		set RTname=#{RTname},RTpassword=#{RTpassword},RTdate=#{RTdate}
+		where RTID=#{RTID}
+	</update>
+	
+	<delete id="deleteRoot">
+		delete from root where RTID=#{RTID}
+	</delete>
 </mapper>

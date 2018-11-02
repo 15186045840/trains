@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.dao.ResourceDao">
+	<select id="selectResource" resultType="Resource">
+		select * from resources
+	</select>
+	
+	<insert id="insertResource">
+		insert into resource(RID,Rname,Rtype,Rlink)
+		value(#{RID},#{Rname},#{Rtype},#{Rlink})
+	</insert>
+	
+	<update id="updateResource">
+		update resource
+		set Rname=#{Rname},Rtype=#{Rtype},Rlink=#{Rlink}
+		where RID=#{RID}
+	</update>
+	
+	<delete id="deleteResource">
+		delete from resource where RID=#{RID}
+	</delete>
+	
+</mapper>

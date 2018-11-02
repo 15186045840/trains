@@ -3,25 +3,8 @@ package com.hk.bean;
 public class Course {
 	private int CID;
 	private String Cname;
-	private String Ctime;
-	private int Cdate;
-	
-
-	public Course() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
-	
-	public Course(int cID, String cname, String ctime, int cdate) {
-		super();
-		CID = cID;
-		Cname = cname;
-		Ctime = ctime;
-		Cdate = cdate;
-	}
-
-
+	private String Ctype;
+	private String Clink;
 	public int getCID() {
 		return CID;
 	}
@@ -34,23 +17,23 @@ public class Course {
 	public void setCname(String cname) {
 		Cname = cname;
 	}
-	public String getCtime() {
-		return Ctime;
+	public String getCtype() {
+		return Ctype;
 	}
-	public void setCtime(String ctime) {
-		Ctime = ctime;
+	public void setCtype(String ctype) {
+		Ctype = ctype;
 	}
-	public int getCdate() {
-		return Cdate;
+	public String getClink() {
+		return Clink;
 	}
-	public void setCdate(int cdate) {
-		Cdate = cdate;
+	public void setClink(String clink) {
+		Clink = clink;
 	}
 	@Override
 	public String toString() {
-		return "Course [CID=" + CID + ", Cname=" + Cname + ", Ctime=" + Ctime + ", Cdate=" + Cdate + "]";
+		return "Course [CID=" + CID + ", Cname=" + Cname + ", Ctype=" + Ctype + ", Clink=" + Clink + "]";
 	}
-	
+
 	
 
 }

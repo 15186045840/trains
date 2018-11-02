@@ -20,4 +20,22 @@ public class CourseServiceImpl implements CourseService {
 		return courseDao.selectCourse();
 	}
 
+	@Override
+	public int insertCourse(Course course) {
+		// TODO Auto-generated method stub
+		return courseDao.insertCourse(course);
+	}
+
+	@Override
+	public int updateCourse(Course course) {
+		// TODO Auto-generated method stub
+		return courseDao.updateCourse(course);
+	}
+
+	@Override
+	public int deleteCourse(int a) {
+		// TODO Auto-generated method stub
+		return courseDao.deleteCourse(a);
+	}
+
 }
