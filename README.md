@@ -1,0 +1,9 @@
+# train
+描述:整合SSM框架以及Shiro实现了简单的权限控制
+##文件目录
+src/main/java/config/**:相关配置文件目录
+doc/train.sql:数据库脚本
+
+登录名：adimn
+密码：admin
+
